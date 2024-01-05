@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B204AC7E2B48233600B0AC05 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204AC7D2B48233600B0AC05 /* StopWatchViewController.swift */; };
 		B21A8C772B480E5D00816810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A8C762B480E5D00816810 /* AppDelegate.swift */; };
 		B21A8C792B480E5D00816810 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A8C782B480E5D00816810 /* SceneDelegate.swift */; };
 		B21A8C7B2B480E5D00816810 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A8C7A2B480E5D00816810 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B204AC7D2B48233600B0AC05 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		B21A8C732B480E5D00816810 /* HealthHabitsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthHabitsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21A8C762B480E5D00816810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B21A8C782B480E5D00816810 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		B21A8C752B480E5D00816810 /* HealthHabitsApp */ = {
 			isa = PBXGroup;
 			children = (
+				B204AC7D2B48233600B0AC05 /* StopWatchViewController.swift */,
 				B21A8C762B480E5D00816810 /* AppDelegate.swift */,
 				B21A8C782B480E5D00816810 /* SceneDelegate.swift */,
 				B21A8C7A2B480E5D00816810 /* ViewController.swift */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B204AC7E2B48233600B0AC05 /* StopWatchViewController.swift in Sources */,
 				B21A8C7B2B480E5D00816810 /* ViewController.swift in Sources */,
 				B21A8C772B480E5D00816810 /* AppDelegate.swift in Sources */,
 				B21A8C792B480E5D00816810 /* SceneDelegate.swift in Sources */,
