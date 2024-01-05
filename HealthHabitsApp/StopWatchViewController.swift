@@ -38,37 +38,26 @@ class StopWatchViewController: UIViewController {
     
     @objc fileprivate func count() {
         seconds += 1
-        if seconds < 10{
-            secondLabel.text = "0\(seconds)"
-        }else{
-            secondLabel.text = "\(seconds)"
-        }
-        
+       
         if seconds == 59 {
             minutes += 1
             seconds = 0
-            if minutes < 10{
-                minuteLabel.text = "0\(minutes)"
-            }else{
-                minuteLabel.text = "\(minutes)"
-            }
         }
         
         if minutes == 59 {
             hours += 1
             minutes = 0
             seconds = 0
-            if hours < 10{
-                hourLabel.text = "0\(hours)"
-            }else{
-                hourLabel.text = "\(hours)"
-            }
         }
         
         if hours == 24 {
             timer.invalidate()
         }
         
+        
+        secondLabel.text =  seconds < 10 ? "0\(seconds)" : "\(seconds)"
+        minuteLabel.text =  minutes < 10 ? "0\(minutes)" : "\(minutes)"
+        hourLabel.text =  hours < 10 ? "0\(hours)" : "\(hours)"
         
     }
     
