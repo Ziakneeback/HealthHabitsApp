@@ -21,9 +21,11 @@ class StopWatchViewController: UIViewController {
     var hours = 0
     var minutes = 0
     var seconds = 0
-    
+    var counter = 0
     var timer = Timer()
 
+    let stopImage = UIImage(systemName: "stop.fill")
+    let playImage = UIImage(named: "play")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,42 +34,48 @@ class StopWatchViewController: UIViewController {
     }
 
     @IBAction func start(_ sender: Any) {
+        if counter == 0{
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(count), userInfo: nil, repeats: true)
+        counter = 1
+        
+        StartButton.setImage(stopImage, for: .normal)
+        
+    }else{
+        
+        timer.invalidate()
+        
+        counter = 0
+        
+        StartButton.setImage(playImage, for: .normal)
+        
+    }
+        
     }
     
     
     @objc fileprivate func count() {
-        seconds += 1
-        if seconds < 10{
-            secondLabel.text = "0\(seconds)"
-        }else{
-            secondLabel.text = "\(seconds)"
-        }
-        
-        if seconds == 59 {
-            minutes += 1
-            seconds = 0
-            if minutes < 10{
-                minuteLabel.text = "0\(minutes)"
-            }else{
-                minuteLabel.text = "\(minutes)"
+            seconds += 1
+           
+            if seconds == 59 {
+                minutes += 1
+                seconds = 0
             }
-        }
-        
-        if minutes == 59 {
-            hours += 1
-            minutes = 0
-            seconds = 0
-            if hours < 10{
-                hourLabel.text = "0\(hours)"
-            }else{
-                hourLabel.text = "\(hours)"
+            
+            if minutes == 59 {
+                hours += 1
+                minutes = 0
+                seconds = 0
             }
-        }
-        
-        if hours == 24 {
-            timer.invalidate()
-        }
+            
+            if hours == 24 {
+                timer.invalidate()
+            }
+            
+            
+            secondLabel.text =  seconds < 10 ? "0\(seconds)" : "\(seconds)"
+            minuteLabel.text =  minutes < 10 ? "0\(minutes)" : "\(minutes)"
+            hourLabel.text =  hours < 10 ? "0\(hours)" : "\(hours)"
+            
         
         
     }
