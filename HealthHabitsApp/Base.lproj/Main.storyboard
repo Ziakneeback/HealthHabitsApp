@@ -159,12 +159,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Название" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VWo-vH-Qun">
-                                <rect key="frame" x="24" y="131" width="345" height="34"/>
+                                <rect key="frame" x="24" y="175" width="345" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcC-KH-bqH">
-                                <rect key="frame" x="325" y="68" width="48" height="31"/>
+                                <rect key="frame" x="325" y="128" width="48" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Frame 3" title=""/>
                                 <connections>
@@ -172,7 +172,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoR-o2-XOo">
-                                <rect key="frame" x="20" y="68" width="44" height="34"/>
+                                <rect key="frame" x="20" y="128" width="44" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Frame 7" title=""/>
                                 <connections>
@@ -183,23 +183,23 @@
                         <viewLayoutGuide key="safeArea" id="vl6-8D-FdH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="CoR-o2-XOo" firstAttribute="top" secondItem="7jT-FM-rR6" secondAttribute="top" constant="68" id="8ML-Lq-4Z1"/>
+                            <constraint firstItem="CoR-o2-XOo" firstAttribute="top" secondItem="7jT-FM-rR6" secondAttribute="top" constant="128" id="8ML-Lq-4Z1"/>
                             <constraint firstItem="VWo-vH-Qun" firstAttribute="leading" secondItem="vl6-8D-FdH" secondAttribute="leading" constant="24" id="LBU-18-kM4"/>
                             <constraint firstItem="CoR-o2-XOo" firstAttribute="leading" secondItem="vl6-8D-FdH" secondAttribute="leading" constant="20" id="Mdt-Mm-aTr"/>
                             <constraint firstItem="vl6-8D-FdH" firstAttribute="trailing" secondItem="VWo-vH-Qun" secondAttribute="trailing" constant="24" id="R7T-tO-HLW"/>
-                            <constraint firstItem="ZcC-KH-bqH" firstAttribute="top" secondItem="7jT-FM-rR6" secondAttribute="top" constant="68" id="SHL-6C-5PK"/>
+                            <constraint firstItem="ZcC-KH-bqH" firstAttribute="top" secondItem="7jT-FM-rR6" secondAttribute="top" constant="128" id="SHL-6C-5PK"/>
                             <constraint firstItem="VWo-vH-Qun" firstAttribute="top" secondItem="vl6-8D-FdH" secondAttribute="top" constant="72" id="ajB-jl-t9A"/>
                             <constraint firstItem="vl6-8D-FdH" firstAttribute="trailing" secondItem="ZcC-KH-bqH" secondAttribute="trailing" constant="20" id="zuh-nq-pNE"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Create" image="plus" catalog="system" id="kRK-1Y-arM"/>
+                    <navigationItem key="navigationItem" id="AAP-lf-eob"/>
                     <connections>
                         <outlet property="userTextFieldToDo" destination="VWo-vH-Qun" id="ASv-6h-bT3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T2v-YR-aKk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="518.32061068702285" y="1324.6478873239437"/>
+            <point key="canvasLocation" x="1445.0381679389313" y="1324.6478873239437"/>
         </scene>
         <!--MainViewController-->
         <scene sceneID="ta5-zK-9uG">
@@ -274,7 +274,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3eO-pS-Mvb"/>
-                        <segue destination="Fy4-Qf-6v9" kind="relationship" relationship="viewControllers" id="4xp-Od-4tq"/>
+                        <segue destination="AcH-fo-FlI" kind="relationship" relationship="viewControllers" id="4xp-Od-4tq"/>
                         <segue destination="5LQ-v8-j0F" kind="relationship" relationship="viewControllers" id="I2g-az-jGe"/>
                         <segue destination="8uy-VV-QqC" kind="show" id="l0j-PU-aVq"/>
                     </connections>
@@ -282,6 +282,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0v-Vf-UYt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-434.35114503816794" y="644.36619718309862"/>
+        </scene>
+        <!--Create-->
+        <scene sceneID="hUS-1R-Fep">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AcH-fo-FlI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Create" image="plus" catalog="system" id="kRK-1Y-arM"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qwS-W8-y0T">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Fy4-Qf-6v9" kind="relationship" relationship="rootViewController" id="TRb-xX-bPE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQB-4r-mw9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="518.32061068702285" y="1324.6478873239437"/>
         </scene>
     </scenes>
     <resources>
