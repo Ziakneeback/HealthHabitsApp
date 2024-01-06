@@ -15,7 +15,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let wrapper = UIView()               // Creating background
+        
         
         // Do any additional setup after loading the view.
     }

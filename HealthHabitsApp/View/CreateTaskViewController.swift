@@ -11,7 +11,7 @@ class CreateTaskViewController: UIViewController {
     
     weak var saveUserToDoDelegate: SaveToDoUserDelegate?
 
-    @IBOutlet weak var userTextFieldToDO: UITextField!
+    @IBOutlet weak var userTextFieldToDo: UITextField!
     
     
     
@@ -23,17 +23,25 @@ class CreateTaskViewController: UIViewController {
     
     
     @IBAction func saveUserToDo(_ sender: Any) {
-        if let todo = userTextFieldToDO.text {
+        print(2222)
+        if let todo = userTextFieldToDo.text {
             if !todo.isEmpty {
                 let todo = UserToDoModel(name: todo, time: "0")
                 saveUserToDoDelegate?.saveUserToDo(todo: todo)
-                dismiss(animated: true, completion: nil)
             }
         }
+        
+        var vc = StopWatchViewController()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        vc = storyboard.instantiateViewController(withIdentifier: "StopWatchViewController") as! StopWatchViewController
+        guard let navigator = navigationController else { return }
+        navigator.pushViewController(vc, animated: true)
+        print(111)
     }
     
     @IBAction func back(_ sender: Any) {
-        
+        print("sssыы")
     }
     
     

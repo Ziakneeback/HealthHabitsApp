@@ -14,6 +14,11 @@
 		B21A8C7E2B480E5D00816810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21A8C7C2B480E5D00816810 /* Main.storyboard */; };
 		B21A8C802B480E5F00816810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B21A8C7F2B480E5F00816810 /* Assets.xcassets */; };
 		B21A8C832B480E5F00816810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21A8C812B480E5F00816810 /* LaunchScreen.storyboard */; };
+		C5E3ACF62B4863270076CAA4 /* UserToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3ACF52B4863270076CAA4 /* UserToDoModel.swift */; };
+		C5E3ACF82B4864760076CAA4 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3ACF72B4864760076CAA4 /* Delegate.swift */; };
+		C5E3ACFD2B486BC40076CAA4 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3ACFC2B486BC40076CAA4 /* CreateTaskViewController.swift */; };
+		C5E3ACFF2B487CF50076CAA4 /* WatchToDoTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3ACFE2B487CF50076CAA4 /* WatchToDoTVC.swift */; };
+		C5E3AD012B48825A0076CAA4 /* ToDoTVCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3AD002B48825A0076CAA4 /* ToDoTVCCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		B21A8C7F2B480E5F00816810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B21A8C822B480E5F00816810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B21A8C842B480E5F00816810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5E3ACF52B4863270076CAA4 /* UserToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToDoModel.swift; sourceTree = "<group>"; };
+		C5E3ACF72B4864760076CAA4 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		C5E3ACFC2B486BC40076CAA4 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
+		C5E3ACFE2B487CF50076CAA4 /* WatchToDoTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchToDoTVC.swift; sourceTree = "<group>"; };
+		C5E3AD002B48825A0076CAA4 /* ToDoTVCCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTVCCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +68,37 @@
 		B21A8C752B480E5D00816810 /* HealthHabitsApp */ = {
 			isa = PBXGroup;
 			children = (
+				C5E3ACF72B4864760076CAA4 /* Delegate.swift */,
 				B204AC7D2B48233600B0AC05 /* StopWatchViewController.swift */,
 				B21A8C762B480E5D00816810 /* AppDelegate.swift */,
 				B21A8C782B480E5D00816810 /* SceneDelegate.swift */,
-				B21A8C7A2B480E5D00816810 /* MainViewController.swift */,
+				C5E3ACF92B486B540076CAA4 /* View */,
+				C5E3ACF42B4862F90076CAA4 /* Model */,
 				B21A8C7C2B480E5D00816810 /* Main.storyboard */,
 				B21A8C7F2B480E5F00816810 /* Assets.xcassets */,
 				B21A8C812B480E5F00816810 /* LaunchScreen.storyboard */,
 				B21A8C842B480E5F00816810 /* Info.plist */,
 			);
 			path = HealthHabitsApp;
+			sourceTree = "<group>";
+		};
+		C5E3ACF42B4862F90076CAA4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C5E3ACF52B4863270076CAA4 /* UserToDoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C5E3ACF92B486B540076CAA4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B21A8C7A2B480E5D00816810 /* MainViewController.swift */,
+				C5E3ACFC2B486BC40076CAA4 /* CreateTaskViewController.swift */,
+				C5E3ACFE2B487CF50076CAA4 /* WatchToDoTVC.swift */,
+				C5E3AD002B48825A0076CAA4 /* ToDoTVCCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +172,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5E3ACF82B4864760076CAA4 /* Delegate.swift in Sources */,
 				B204AC7E2B48233600B0AC05 /* StopWatchViewController.swift in Sources */,
+				C5E3ACF62B4863270076CAA4 /* UserToDoModel.swift in Sources */,
 				B21A8C7B2B480E5D00816810 /* MainViewController.swift in Sources */,
 				B21A8C772B480E5D00816810 /* AppDelegate.swift in Sources */,
+				C5E3AD012B48825A0076CAA4 /* ToDoTVCCell.swift in Sources */,
 				B21A8C792B480E5D00816810 /* SceneDelegate.swift in Sources */,
+				C5E3ACFD2B486BC40076CAA4 /* CreateTaskViewController.swift in Sources */,
+				C5E3ACFF2B487CF50076CAA4 /* WatchToDoTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

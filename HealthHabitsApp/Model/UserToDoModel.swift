@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+struct  UserToDoModel {
+    var name: String
+    var time: String
+    var currentIndex: IndexPath?
+}

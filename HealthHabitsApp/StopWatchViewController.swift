@@ -16,6 +16,8 @@ class StopWatchViewController: UIViewController {
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var StartButton: UIButton!
     
+    @IBOutlet weak var saveToDo: UIButton!
+    
     // MARK: - Variables
     
     var hours = 0

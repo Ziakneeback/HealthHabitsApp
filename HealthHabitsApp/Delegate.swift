@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+protocol SaveToDoUserDelegate: AnyObject {
+    func saveUserToDo(todo: UserToDoModel)
+}
+
+protocol PushNameToDoDelegate: AnyObject {
+    func pushNameToDo(todo: UserToDoModel)
+}
+
+
