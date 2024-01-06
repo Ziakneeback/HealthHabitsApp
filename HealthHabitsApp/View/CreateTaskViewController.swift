@@ -37,11 +37,11 @@ class CreateTaskViewController: UIViewController {
         vc = storyboard.instantiateViewController(withIdentifier: "WatchToDoTVC") as! WatchToDoTVC
         guard let navigator = navigationController else { return }
         navigator.pushViewController(vc, animated: true)
-        print(111)
+        
     }
     
     @IBAction func back(_ sender: Any) {
-        print("sssыы")
+        
     }
     
     

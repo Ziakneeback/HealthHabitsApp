@@ -137,6 +137,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="someTodo" destination="uRp-5F-gT3" id="AcK-eG-83S"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

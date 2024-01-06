@@ -9,6 +9,8 @@ import UIKit
 
 class ToDoTVCCell: UITableViewCell {
 
+    @IBOutlet weak var someTodo: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +20,11 @@ class ToDoTVCCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func cellData(todo: UserToDoModel) {
+        someTodo.text = todo.name
+        //сюда же сложить время
     }
 
 }
