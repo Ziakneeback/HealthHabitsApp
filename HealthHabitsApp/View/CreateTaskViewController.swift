@@ -23,11 +23,12 @@ class CreateTaskViewController: UIViewController {
     
     
     @IBAction func saveUserToDo(_ sender: Any) {
-        print(2222)
+        
         if let todo = userTextFieldToDo.text {
             if !todo.isEmpty {
                 let todo = UserToDoModel(name: todo, time: "0")
                 saveUserToDoDelegate?.saveUserToDo(todo: todo)
+                print("todo: ", todo)
             }
         }
         
