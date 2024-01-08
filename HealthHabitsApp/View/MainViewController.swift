@@ -7,19 +7,29 @@
 
 import UIKit
 
+protocol MainViewControllerDelegate {
+    func setTime(time: String)
+}
+
+
 class MainViewController: UIViewController {
 
     @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var timeLabel: UILabel!
     
-    
+    var totalTime = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        // Do any additional setup after loading the view.
+        timeLabel.text = totalTime
     }
 
 
 }
 
+extension MainViewController: MainViewControllerDelegate{
+    func setTime(time: String) {
+        totalTime = time 
+    }
+}
