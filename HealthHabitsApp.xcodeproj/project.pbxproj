@@ -14,6 +14,7 @@
 		B21A8C7E2B480E5D00816810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21A8C7C2B480E5D00816810 /* Main.storyboard */; };
 		B21A8C802B480E5F00816810 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B21A8C7F2B480E5F00816810 /* Assets.xcassets */; };
 		B21A8C832B480E5F00816810 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21A8C812B480E5F00816810 /* LaunchScreen.storyboard */; };
+		C558E82F2B4BCACF002E67BB /* MyTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C558E82E2B4BCACF002E67BB /* MyTabBarController.swift */; };
 		C5E3ACF62B4863270076CAA4 /* UserToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3ACF52B4863270076CAA4 /* UserToDoModel.swift */; };
 		C5E3ACF82B4864760076CAA4 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3ACF72B4864760076CAA4 /* Delegate.swift */; };
 		C5E3ACFD2B486BC40076CAA4 /* CreateTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5E3ACFC2B486BC40076CAA4 /* CreateTaskViewController.swift */; };
@@ -31,6 +32,7 @@
 		B21A8C7F2B480E5F00816810 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B21A8C822B480E5F00816810 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B21A8C842B480E5F00816810 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C558E82E2B4BCACF002E67BB /* MyTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTabBarController.swift; sourceTree = "<group>"; };
 		C5E3ACF52B4863270076CAA4 /* UserToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToDoModel.swift; sourceTree = "<group>"; };
 		C5E3ACF72B4864760076CAA4 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		C5E3ACFC2B486BC40076CAA4 /* CreateTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTaskViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				B204AC7D2B48233600B0AC05 /* StopWatchViewController.swift */,
 				B21A8C762B480E5D00816810 /* AppDelegate.swift */,
 				B21A8C782B480E5D00816810 /* SceneDelegate.swift */,
+				C558E82E2B4BCACF002E67BB /* MyTabBarController.swift */,
 				C5E3ACF92B486B540076CAA4 /* View */,
 				C5E3ACF42B4862F90076CAA4 /* Model */,
 				B21A8C7C2B480E5D00816810 /* Main.storyboard */,
@@ -175,6 +178,7 @@
 				C5E3ACF82B4864760076CAA4 /* Delegate.swift in Sources */,
 				B204AC7E2B48233600B0AC05 /* StopWatchViewController.swift in Sources */,
 				C5E3ACF62B4863270076CAA4 /* UserToDoModel.swift in Sources */,
+				C558E82F2B4BCACF002E67BB /* MyTabBarController.swift in Sources */,
 				B21A8C7B2B480E5D00816810 /* MainViewController.swift in Sources */,
 				B21A8C772B480E5D00816810 /* AppDelegate.swift in Sources */,
 				C5E3AD012B48825A0076CAA4 /* ToDoTVCCell.swift in Sources */,

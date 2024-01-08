@@ -23,7 +23,8 @@ class ToDoTVCCell: UITableViewCell {
     }
     
     func cellData(todo: UserToDoModel) {
-        someTodo.text = todo.name
+        print("TODO NAME: ", todo.name)
+        someTodo?.text = todo.name
         //сюда же сложить время
     }
 

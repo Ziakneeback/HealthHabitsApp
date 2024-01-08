@@ -105,14 +105,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="492.36641221374043" y="644.36619718309862"/>
+            <point key="canvasLocation" x="2610" y="533"/>
         </scene>
         <!--WatchToDoTVC-->
         <scene sceneID="nxN-Om-7Qz">
             <objects>
                 <tableViewController storyboardIdentifier="WatchToDoTVC" title="WatchToDoTVC" id="8uy-VV-QqC" customClass="WatchToDoTVC" customModule="HealthHabitsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="uX8-Xf-u46">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="mtP-74-uhY">
@@ -128,8 +128,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="todoName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRp-5F-gT3">
-                                            <rect key="frame" x="20" y="11" width="80" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuC-TT-vgl">
+                                            <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYr-RY-B8V">
+                                            <rect key="frame" x="321" y="11" width="42" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -138,7 +145,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="someTodo" destination="uRp-5F-gT3" id="AcK-eG-83S"/>
+                                    <outlet property="someTodo" destination="fuC-TT-vgl" id="wpD-3m-akC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -147,11 +154,15 @@
                             <outlet property="delegate" destination="8uy-VV-QqC" id="a6z-s4-gde"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Главная" image="home-2" id="tfS-u3-VhF"/>
                     <navigationItem key="navigationItem" id="1hS-Q0-2eU"/>
+                    <connections>
+                        <outlet property="blueView" destination="mtP-74-uhY" id="4SA-b2-wP3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SO-Eg-evN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391.6030534351144" y="643.66197183098598"/>
+            <point key="canvasLocation" x="1219" y="644"/>
         </scene>
         <!--CreateTaskViewController-->
         <scene sceneID="Rsz-PB-Sr1">
@@ -172,6 +183,7 @@
                                 <buttonConfiguration key="configuration" style="plain" image="Frame 3" title=""/>
                                 <connections>
                                     <action selector="saveUserToDo:" destination="Fy4-Qf-6v9" eventType="touchUpInside" id="6WA-ju-uMe"/>
+                                    <segue destination="8uy-VV-QqC" kind="show" identifier="toWatchToDoVC" id="Hgb-W6-Yis"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoR-o2-XOo">
@@ -264,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="362.59541984732823" y="-50"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--My Tab Bar Controller-->
         <scene sceneID="vGa-2v-YBu">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="brn-sj-Ry1" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MyTabBarController" automaticallyAdjustsScrollViewInsets="NO" id="brn-sj-Ry1" customClass="MyTabBarController" customModule="HealthHabitsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="cSY-WC-fQ9"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sK1-Y7-k2m">
@@ -276,10 +288,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="3eO-pS-Mvb"/>
-                        <segue destination="AcH-fo-FlI" kind="relationship" relationship="viewControllers" id="4xp-Od-4tq"/>
-                        <segue destination="5LQ-v8-j0F" kind="relationship" relationship="viewControllers" id="I2g-az-jGe"/>
-                        <segue destination="8uy-VV-QqC" kind="show" id="l0j-PU-aVq"/>
+                        <segue destination="8uy-VV-QqC" kind="relationship" relationship="viewControllers" id="QUJ-i7-8w3"/>
+                        <segue destination="AcH-fo-FlI" kind="relationship" relationship="viewControllers" id="foN-VA-gGi"/>
+                        <segue destination="5LQ-v8-j0F" kind="relationship" relationship="viewControllers" id="Rql-O7-NZa"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0v-Vf-UYt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -306,6 +317,9 @@
             <point key="canvasLocation" x="518.32061068702285" y="1324.6478873239437"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Hgb-W6-Yis"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Frame 3" width="24" height="17"/>
         <image name="Frame 7" width="20" height="20"/>
