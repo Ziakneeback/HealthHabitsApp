@@ -26,8 +26,13 @@ class StopWatchViewController: UIViewController {
     var counter = 0
     var timer = Timer()
 
-    let stopImage = UIImage(systemName: "stop.fill")
+    let stopImage = UIImage(systemName: "stop")?.withTintColor(.black, renderingMode: .alwaysOriginal)
     let playImage = UIImage(named: "play")
+    
+    
+    var delegateTime: MainViewControllerDelegate!
+    
+    var totalTime = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +87,15 @@ class StopWatchViewController: UIViewController {
         
     }
     
+    @IBAction func doneRecording(_ sender: Any) {
+        timer.invalidate()
+        
+        StartButton.setImage(playImage, for: .normal)
+        
+        totalTime = "\(hours):\(minutes):\(seconds)"
+        
+        delegateTime.setTime(time: totalTime)
+    }
     
 
 }
