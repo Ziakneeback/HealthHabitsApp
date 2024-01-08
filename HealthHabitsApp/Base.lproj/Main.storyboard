@@ -12,6 +12,7 @@
         <!--StopWatchViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="StopWatchViewController" title="StopWatchViewController" id="BYZ-38-t0r" customClass="StopWatchViewController" customModule="HealthHabitsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -36,9 +37,6 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="48" height="38"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="play" title=""/>
-                                                        <connections>
-                                                            <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AtP-pt-KmO"/>
-                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b9s-iQ-Wqm">
                                                         <rect key="frame" x="59.999999999999993" y="0.0" width="20.666666666666664" height="38"/>
@@ -76,9 +74,6 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="checkmark" catalog="system">
                                                             <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="doneRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vG5-TU-8hn"/>
-                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -88,9 +83,6 @@
                                         <rect key="frame" x="239" y="0.0" width="48" height="38"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrow-right" title=""/>
-                                        <connections>
-                                            <segue destination="5LQ-v8-j0F" kind="show" id="0EF-EX-iDf"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -103,16 +95,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" image="home-2" id="ReU-PR-8qd"/>
-                    <connections>
-                        <outlet property="StartButton" destination="uJS-ri-RUi" id="3bj-xw-zKS"/>
-                        <outlet property="hourLabel" destination="b9s-iQ-Wqm" id="RoQ-Fe-t4n"/>
-                        <outlet property="minuteLabel" destination="jAH-mf-u1e" id="NhW-F1-xYQ"/>
-                        <outlet property="nameTimer" destination="BmZ-ad-djM" id="iNa-Sd-nR0"/>
-                        <outlet property="saveToDo" destination="FBQ-Om-vpY" id="rdv-X8-JNc"/>
-                        <outlet property="secondLabel" destination="eSd-VG-hde" id="dSm-qA-CDS"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2610" y="533"/>
         </scene>
@@ -157,6 +140,8 @@
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="plain" image="play" title=""/>
                                                                     <connections>
+                                                                        <action selector="doneRecording:" destination="t2R-Ag-nau" eventType="touchUpInside" id="NRQ-CF-dGL"/>
+                                                                        <action selector="start:" destination="t2R-Ag-nau" eventType="touchUpInside" id="fyd-dF-lz7"/>
                                                                         <action selector="start:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iLO-UL-fPM"/>
                                                                     </connections>
                                                                 </button>
@@ -196,9 +181,6 @@
                                                                     <buttonConfiguration key="configuration" style="plain" image="checkmark" catalog="system">
                                                                         <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     </buttonConfiguration>
-                                                                    <connections>
-                                                                        <action selector="doneRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XPx-dc-B48"/>
-                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -220,6 +202,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="StartButton" destination="e6x-Vk-4bF" id="0QA-Yw-WCE"/>
+                                    <outlet property="hourLabel" destination="s36-ds-q5h" id="EcP-NK-nlu"/>
+                                    <outlet property="minuteLabel" destination="dXH-FW-A2r" id="AdL-Gn-FnX"/>
+                                    <outlet property="saveToDo" destination="FlI-wH-QOo" id="q6n-Qu-nMD"/>
+                                    <outlet property="secondLabel" destination="Q05-Av-LUc" id="HnL-SH-u3F"/>
                                     <outlet property="someTodo" destination="5Q9-ty-hq9" id="0mq-ye-k1l"/>
                                 </connections>
                             </tableViewCell>
@@ -296,11 +283,11 @@
             <objects>
                 <viewController storyboardIdentifier="MainViewController" title="MainViewController" id="5LQ-v8-j0F" customClass="MainViewController" customModule="HealthHabitsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3O7-at-uCI">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="4Uq-sb-0sl">
-                                <rect key="frame" x="24" y="72" width="345" height="38"/>
+                                <rect key="frame" x="24" y="131" width="345" height="38"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Название " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-aM-Qfr">
                                         <rect key="frame" x="0.0" y="0.0" width="173.33333333333334" height="38"/>
@@ -394,7 +381,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0EF-EX-iDf"/>
         <segue reference="Hgb-W6-Yis"/>
     </inferredMetricsTieBreakers>
     <resources>
