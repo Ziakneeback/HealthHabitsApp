@@ -9,6 +9,7 @@ import UIKit
 
 class WatchToDoTVC: UITableViewController {
     
+    var moveDataToMainVC: MainViewControllerDelegate?
     
     var vc = CreateTaskViewController()
     
@@ -35,14 +36,10 @@ class WatchToDoTVC: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        print("numberOfRowsInSection: ", arrayUserToDo)
-//        print("vc.saveUserToDoDelegate ??: ", vc.saveUserToDoDelegate ?? "nil")
         return vc.myArray.count
     }
     
@@ -51,9 +48,7 @@ class WatchToDoTVC: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoTVCCell") as? ToDoTVCCell else { return UITableViewCell()}
         vc.myArray[indexPath.row].currentIndex = indexPath
         let todo = vc.myArray[indexPath.row]
-        print("todo.name: ", todo.name)
         cell.cellData(todo: todo)
-        print("cell.name: ", cell.someTodo?.text ?? "niiiil")
         return cell
     }
     

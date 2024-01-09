@@ -12,7 +12,6 @@
         <!--StopWatchViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="StopWatchViewController" title="StopWatchViewController" id="BYZ-38-t0r" customClass="StopWatchViewController" customModule="HealthHabitsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
@@ -96,6 +95,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" image="home-2" id="ReU-PR-8qd"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2610" y="533"/>
         </scene>
@@ -269,7 +269,10 @@
                             <constraint firstItem="vl6-8D-FdH" firstAttribute="trailing" secondItem="ZcC-KH-bqH" secondAttribute="trailing" constant="20" id="zuh-nq-pNE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="AAP-lf-eob"/>
+                    <navigationItem key="navigationItem" id="AAP-lf-eob">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="Frame 7" id="yxs-1K-VQG"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="Frame 3" id="pQb-Ck-MEg"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="userTextFieldToDo" destination="VWo-vH-Qun" id="ASv-6h-bT3"/>
                     </connections>
@@ -278,66 +281,71 @@
             </objects>
             <point key="canvasLocation" x="1445.0381679389313" y="1324.6478873239437"/>
         </scene>
-        <!--MainViewController-->
-        <scene sceneID="ta5-zK-9uG">
+        <!--SetViewController-->
+        <scene sceneID="2I1-3L-5Qr">
             <objects>
-                <viewController storyboardIdentifier="MainViewController" title="MainViewController" id="5LQ-v8-j0F" customClass="MainViewController" customModule="HealthHabitsApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3O7-at-uCI">
+                <tableViewController storyboardIdentifier="SetViewController" title="SetViewController" id="gp1-bW-DJR" customClass="SetViewController" customModule="HealthHabitsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="rhL-wn-FiO">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="4Uq-sb-0sl">
-                                <rect key="frame" x="24" y="131" width="345" height="38"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Название " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-aM-Qfr">
-                                        <rect key="frame" x="0.0" y="0.0" width="173.33333333333334" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:01:43" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7HW-Xf-sXU">
-                                        <rect key="frame" x="207.33333333333334" y="0.0" width="65.666666666666657" height="38"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAh-ek-G7a">
-                                        <rect key="frame" x="307" y="0.0" width="38" height="38"/>
-                                        <color key="backgroundColor" systemColor="linkColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="38" id="nBo-Ja-j64"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="myTrash" title=""/>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="GAh-ek-G7a" secondAttribute="trailing" id="YKx-QX-puc"/>
-                                    <constraint firstAttribute="bottom" secondItem="7HW-Xf-sXU" secondAttribute="bottom" id="fpd-mf-JG3"/>
-                                    <constraint firstItem="Je0-aM-Qfr" firstAttribute="leading" secondItem="4Uq-sb-0sl" secondAttribute="leading" id="w7Y-FB-B9b"/>
-                                    <constraint firstItem="7HW-Xf-sXU" firstAttribute="top" secondItem="4Uq-sb-0sl" secondAttribute="top" id="wIU-o0-gPm"/>
-                                    <constraint firstAttribute="trailing" secondItem="GAh-ek-G7a" secondAttribute="trailing" id="zk7-Sf-Hv4"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="QiE-XD-wfA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="4Uq-sb-0sl" firstAttribute="leading" secondItem="QiE-XD-wfA" secondAttribute="leading" constant="24" id="DGx-3x-D0Z"/>
-                            <constraint firstItem="4Uq-sb-0sl" firstAttribute="top" secondItem="QiE-XD-wfA" secondAttribute="top" constant="72" id="RGp-7f-nT5"/>
-                            <constraint firstItem="QiE-XD-wfA" firstAttribute="trailing" secondItem="4Uq-sb-0sl" secondAttribute="trailing" constant="24" id="RZR-jP-gyl"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Настройки " image="gearshape" catalog="system" id="99m-OG-XAn"/>
-                    <navigationItem key="navigationItem" id="NLr-aO-jtl"/>
-                    <connections>
-                        <outlet property="stackView" destination="4Uq-sb-0sl" id="IwS-KT-p8t"/>
-                        <outlet property="timeLabel" destination="7HW-Xf-sXU" id="Vyi-Dm-rEj"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9JJ-t4-8hp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="iDX-Su-ivw" customClass="SetViewCell" customModule="HealthHabitsApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="42.333332061767578"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iDX-Su-ivw" id="6wG-RT-UBm">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="42.333332061767578"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="Uln-3j-AZs">
+                                            <rect key="frame" x="10" y="2" width="373" height="38.333333333333336"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Название " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmy-ff-BiZ">
+                                                    <rect key="frame" x="0.0" y="0.0" width="201.33333333333334" height="38.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="01:01:43" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SM-Cf-IBc">
+                                                    <rect key="frame" x="235.33333333333334" y="0.0" width="65.666666666666657" height="38.333333333333336"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxX-YI-Chm">
+                                                    <rect key="frame" x="335" y="0.0" width="38" height="38.333333333333336"/>
+                                                    <color key="backgroundColor" systemColor="linkColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="38" id="UMR-RV-nCh"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="myTrash" title=""/>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Uln-3j-AZs" firstAttribute="top" secondItem="6wG-RT-UBm" secondAttribute="top" constant="2" id="5GS-El-rQa"/>
+                                        <constraint firstItem="Uln-3j-AZs" firstAttribute="leading" secondItem="6wG-RT-UBm" secondAttribute="leading" constant="10" id="kqw-VW-EZp"/>
+                                        <constraint firstAttribute="bottom" secondItem="Uln-3j-AZs" secondAttribute="bottom" constant="2" id="prV-bg-jBh"/>
+                                        <constraint firstAttribute="trailing" secondItem="Uln-3j-AZs" secondAttribute="trailing" constant="10" id="rCR-ZZ-fJR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="nameTimer" destination="vmy-ff-BiZ" id="Roq-3D-MsB"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gp1-bW-DJR" id="9NM-af-K6G"/>
+                            <outlet property="delegate" destination="gp1-bW-DJR" id="aPm-xv-G0z"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Setting" image="gearshape" catalog="system" selectedImage="gearshape" id="1U7-B8-Pd6"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thv-fm-tBb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="362.59541984732823" y="-50"/>
+            <point key="canvasLocation" x="338" y="-36"/>
         </scene>
         <!--My Tab Bar Controller-->
         <scene sceneID="vGa-2v-YBu">
@@ -353,7 +361,7 @@
                     <connections>
                         <segue destination="8uy-VV-QqC" kind="relationship" relationship="viewControllers" id="QUJ-i7-8w3"/>
                         <segue destination="AcH-fo-FlI" kind="relationship" relationship="viewControllers" id="foN-VA-gGi"/>
-                        <segue destination="5LQ-v8-j0F" kind="relationship" relationship="viewControllers" id="Rql-O7-NZa"/>
+                        <segue destination="gp1-bW-DJR" kind="relationship" relationship="viewControllers" id="WKP-i2-B4l"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f0v-Vf-UYt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -381,7 +389,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Hgb-W6-Yis"/>
+        <segue reference="QUJ-i7-8w3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Frame 3" width="24" height="17"/>
@@ -394,7 +402,7 @@
         <image name="play" width="24" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="linkColor">
-            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

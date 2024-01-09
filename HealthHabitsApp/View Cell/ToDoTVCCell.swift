@@ -109,7 +109,7 @@ class ToDoTVCCell: UITableViewCell {
         
         totalTime = "\(hours):\(minutes):\(seconds)"
         
-        delegateTime?.setTime(time: totalTime)
+        delegateTime?.takeTimeCell(time: totalTime)
     }
 
 }

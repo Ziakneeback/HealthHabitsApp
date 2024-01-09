@@ -97,7 +97,7 @@ class StopWatchViewController: UIViewController {
         
         totalTime = "\(hours):\(minutes):\(seconds)"
         
-        delegateTime.setTime(time: totalTime)
+        //delegateTime.setTime(time: totalTime)
     }
     
 
