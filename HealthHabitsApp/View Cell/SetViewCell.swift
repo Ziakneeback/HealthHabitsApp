@@ -8,7 +8,8 @@
 import UIKit
 
 class SetViewCell: UITableViewCell {
-
+    
+    weak var moveTimerCellDelegat: SetViewControllerDelegate?
     
     @IBOutlet weak var nameTimer: UILabel!
     
@@ -22,6 +23,8 @@ class SetViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
 }
 
 

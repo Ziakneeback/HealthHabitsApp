@@ -11,7 +11,7 @@ protocol SaveToDoUserDelegate: AnyObject {
     func saveUserToDo(todo: UserToDoModel)
 }
 
-protocol MainViewControllerDelegate {
-    func takeTimeCell(time: String)
+protocol SetViewControllerDelegate: AnyObject {
+    func takeTimeCell(timer: UserToDoModel)
 }
 

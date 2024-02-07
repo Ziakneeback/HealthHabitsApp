@@ -9,7 +9,7 @@ import UIKit
 
 class WatchToDoTVC: UITableViewController {
     
-    var moveDataToMainVC: MainViewControllerDelegate?
+    
     
     var vc = CreateTaskViewController()
     
@@ -66,3 +66,4 @@ class WatchToDoTVC: UITableViewController {
 //    
 //    
 //}
+

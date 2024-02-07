@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B204AC7E2B48233600B0AC05 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B204AC7D2B48233600B0AC05 /* StopWatchViewController.swift */; };
 		B21A8C772B480E5D00816810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A8C762B480E5D00816810 /* AppDelegate.swift */; };
 		B21A8C792B480E5D00816810 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21A8C782B480E5D00816810 /* SceneDelegate.swift */; };
 		B21A8C7E2B480E5D00816810 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B21A8C7C2B480E5D00816810 /* Main.storyboard */; };
@@ -24,7 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B204AC7D2B48233600B0AC05 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		B21A8C732B480E5D00816810 /* HealthHabitsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthHabitsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B21A8C762B480E5D00816810 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B21A8C782B480E5D00816810 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				C5E3ACF72B4864760076CAA4 /* Delegate.swift */,
-				B204AC7D2B48233600B0AC05 /* StopWatchViewController.swift */,
 				B21A8C762B480E5D00816810 /* AppDelegate.swift */,
 				B21A8C782B480E5D00816810 /* SceneDelegate.swift */,
 				C558E82E2B4BCACF002E67BB /* MyTabBarController.swift */,
@@ -188,7 +185,6 @@
 			files = (
 				C5E3ACF82B4864760076CAA4 /* Delegate.swift in Sources */,
 				C5597AE42B4D065400548D93 /* SetViewController.swift in Sources */,
-				B204AC7E2B48233600B0AC05 /* StopWatchViewController.swift in Sources */,
 				C5E3ACF62B4863270076CAA4 /* UserToDoModel.swift in Sources */,
 				C558E82F2B4BCACF002E67BB /* MyTabBarController.swift in Sources */,
 				B21A8C772B480E5D00816810 /* AppDelegate.swift in Sources */,

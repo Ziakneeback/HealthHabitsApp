@@ -8,6 +8,7 @@
 import UIKit
 
 class ToDoTVCCell: UITableViewCell {
+    
 
     @IBOutlet weak var hourLabel: UILabel!
     @IBOutlet weak var minuteLabel: UILabel!
@@ -29,7 +30,7 @@ class ToDoTVCCell: UITableViewCell {
     let playImage = UIImage(named: "play")
     
     
-    var delegateTime: MainViewControllerDelegate!
+   
     
     var totalTime = ""
     
@@ -109,7 +110,7 @@ class ToDoTVCCell: UITableViewCell {
         
         totalTime = "\(hours):\(minutes):\(seconds)"
         
-        delegateTime?.takeTimeCell(time: totalTime)
+        
     }
 
 }
